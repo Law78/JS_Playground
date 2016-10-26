@@ -1,4 +1,5 @@
 // Call e Apply eseguono subito la funzione
+// Bind lega il contesto ma non esegue la funzione
 
 // Cosa succede quando richiamo una funzione con il new ? Creo un this :)
 function test1(){
@@ -64,3 +65,15 @@ b2();
 
 var log = myBind(console);
 log(console.log, "hello", "world", "!!!", ";)");
+
+
+function add(x, y){
+  //console.log(x, y);
+  return x + y;
+}
+// Somma con il precedente: 1 3 5 7 9
+console.log(array.map(add.bind(array)));
+// Somma gli elementi +1
+console.log(array.map(add.bind(array, 1)));
+// Somma gli elementi dell'array: 15
+console.log(array.reduce(add.bind(array)));

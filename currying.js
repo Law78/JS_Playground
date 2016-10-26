@@ -1,5 +1,6 @@
-
-
+// Il curryng vero è quello che data add(1, 2, 3)  ritorna una funzione con un solo argomento add(1)(2)(3)
+// Vedi il libro di Eric Elliot.
+// Il currying che si intende generalmente è il partial.
 var multiply = function(a, b){
 	return a * b;
 }
